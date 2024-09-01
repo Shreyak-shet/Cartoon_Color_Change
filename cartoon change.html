@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>color change Cartoon</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+<section id="all-holder">
+  <div class="head"></div>
+
+  <div class="jaw">
+    <div class="whisker">
+      <span class="whisk"></span>
+    </div>
+  </div>
+
+  <span class="faceLine-cutter"></span>
+  <!--ear-->
+  <div class="ears"></div>
+  <div class="ears ear2"></div>
+  <!--eyes-->
+  <div class="eyes"></div>
+  <div class="eyes eye2"></div>
+  <!--eyebrows-->
+  <div class="eyebrow"></div>
+  <div class=" eyebrow eyebrow2"></div>
+  <!--Nose-->
+  <div class="nose"></div>
+  <div class="mouth"></div>
+  <!--body-->
+  <div class="body">
+  <div class="shirt">
+    <span class="collar"></span>
+  </div>
+  </div>
+  <!--hands-->
+  <div class="hands">
+    <span class="arm">
+    <span class="cuff"></span>
+    </span>
+  </div>
+  <!--hands-->
+  <div class="hands hand2">
+    <span class="arm">
+    <span class="cuff"></span>
+    </span>
+  </div>
+  <!--fingers-->
+  <div class="paw">
+    <span class="palm"></span>
+  </div>
+  <!--fingers-->
+  <div class="paw paw2">
+    <span class="palm"></span>
+  </div>
+  <!--waist-->
+  <div class="waist">
+    <span class="zip"></span>
+  </div>
+  <!--leg-->
+  <div class="legs">
+    <div class="foot">
+      <span class="legLine"></span>
+    </div>
+  </div>
+  <!--leg-->
+  <div class="legs rLeg">
+    <div class="foot">
+      <span class="legLine"></span>
+    </div>
+  </div>
+</section>
+<!--Choose your Color section-->
+<section id="cutomise-holder">
+<span>Let color it</span>
+<div class="part">
+  <span>Skin Color:</span>
+  <ul part="--skinColor">
+    <li class="partColor" style='--color:#f99;'></li>
+    <li class="partColor" style='--color:#ffcc80;'></li>
+    <li class="partColor" style='--color:#ffeb3b;'></li>
+    <li class="partColor" style='--color:#4de54d;'></li>
+    <li class="partColor" style='--color:#999;'></li>
+    <li class="partColor" style='--color:#4bc6e3;'></li>
+  </ul>
+</div>
+
+<div class="part">
+  <span>Shirt Color:</span>
+  <ul part="--shirtColor">
+    <li class="partColor" style='--color:#d56ae7;'></li>
+    <li class="partColor" style='--color:#f44336;'></li>
+    <li class="partColor" style='--color:#fff;'></li>
+    <li class="partColor" style='--color:#54ff7a;'></li>
+    <li class="partColor" style='--color:#5e6064;'></li>
+    <li class="partColor" style='--color:#ffeb3b;'></li>
+    <li class="partColor" style='--color:#fddbb9'></li>
+    <li class="partColor" style='--color:#ff9800;'></li>
+    <li class="partColor" style='--color:#8b4bfd;'></li>
+    <li class="partColor" style='--color:#977467'></li>
+
+  </ul>
+</div>
+
+<div class="part">
+  <span>collar,Color:</span>
+  <ul part="--collarColor">
+  <li class="partColor" style='--color:#f44336;'></li>
+  <li class="partColor" style='--color:#ffeb3b'></li>
+  <li class="partColor" style='--color:#fff;'></li>
+  <li class="partColor" style='--color:lime'></li>
+  <li class="partColor" style='--color:#985641'></li>
+  </ul>
+</div>
+
+<div class="part">
+  <span>Short Color:</span>
+  <ul part="shortColor">
+  
+  <li class="partColor" style='--color:#fff;'></li>
+  <li class="partColor" style='--color:#5e6064'></li>
+  <li class="partColor" style='--color:lime'></li>
+  <li class="partColor" style='--color:#f44336;'></li>
+  <li class="partColor" style='--color:#ffeb3b'></li>
+  </ul>
+</div>
+  
+</section>
+
+
+
+<script type="text/javascript">;
+const colors = document.querySelectorAll('.partColor');
+
+for(let color of colors){
+  color.onclick = function(){
+const part = color.parentNode.getAttribute('part');
+
+const colorsProp = getComputedStyle(color);
+const newColr = colorsProp.getPropertyValue('--color');
+    document.documentElement.style.setProperty(part, newColr);
+    
+  }
+}
+
+</script>
+
+  </body>
+</html>
